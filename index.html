@@ -1,237 +1,598 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Bismillah Bearing Store</title>
-<style>
-  * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Bismillah Bearing Store. Buy premium bearings online in Pakistan. NTN, SKF, FAG, KOYO, TIMKEN. Needle, ball, taper, high-speed bearings in Lahore since 1995. Quality guaranteed.">
+    <meta name="keywords" content="Bearings Pakistan, NTN Bearings, SKF Bearings, FAG Bearings, KOYO Bearings, TIMKEN Bearings, Needle Bearings, Taper Roller Bearings, Ball Bearings, High-Speed Bearings, Universal Bearings, Bushes, Brackets, Bearings Lahore, Buy Bearings Online, Industrial Bearings">
+    <meta name="author" content="Bismillah Bearing Store">
+    <meta property="og:title" content="Bismillah Bearing Store - Premium Bearings in Pakistan">
+    <meta property="og:description" content="Buy high-quality bearings online: NTN, SKF, FAG, KOYO, TIMKEN. Needle, ball, taper, and high-speed bearings.">
+    <meta property="og:image" content="imaages/1.png">
+    <meta property="og:url" content="https://yourwebsite.com">
+    <meta property="og:type" content="website">
+    <title>Bismillah Bearing Store</title>
+    <style>
+        /* --- SKF Inspired Color Palette & Fonts --- */
+        :root {
+            --skf-black: #222;
+            --skf-gray-dark: #333;
+            --skf-gray-medium: #666;
+            --skf-gray-light: #f0f3f6;
+            --skf-white: #ffffff;
+            --skf-accent-yellow: #ffc20e;
+        }
 
-  body {
-    font-family: Arial, sans-serif;
-    background-color: #fff;
-    color: #333;
-    line-height: 1.6;
-  }
+        /* --- General & Base Styles --- */
+        * {
+            box-sizing: border-box;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background-color: var(--skf-gray-light);
+            color: var(--skf-gray-dark);
+            line-height: 1.6;
+            font-size: 16px;
+            margin: 0;
+            padding: 0;
+        }
 
-  /* Header / Nav */
-  header {
-    background-color: #004080;
-    color: white;
-    padding: 20px;
-    text-align: center;
-  }
-  header img {
-    width: 100px;
-    margin-bottom: 10px;
-  }
-  header h1 {
-    font-size: 28px;
-    margin-bottom: 5px;
-  }
-  header p {
-    font-size: 16px;
-    opacity: 0.9;
-  }
+        /* --- Header & Navigation --- */
+        header {
+            background-color: var(--skf-black);
+            color: var(--skf-white);
+            padding: 40px 20px;
+            text-align: center;
+        }
+        .header-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+        }
+        .logo.big-logo {
+            max-width: 250px;
+            height: auto;
+            margin-bottom: 10px;
+        }
+        header h1 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            margin: 0;
+        }
+        header p {
+            font-size: 1.2rem;
+            margin: 0;
+            color: #ccc;
+        }
 
-  nav {
-    background-color: #003366;
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    padding: 12px;
-    flex-wrap: wrap;
-  }
-  nav a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: 500;
-    font-size: 15px;
-  }
-  nav a:hover {
-    text-decoration: underline;
-  }
+        nav {
+            background-color: var(--skf-gray-dark);
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            padding: 15px;
+            flex-wrap: wrap;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        nav a {
+            color: var(--skf-white);
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: var(--skf-accent-yellow);
+        }
 
-  /* Container */
-  .container {
-    max-width: 1200px;
-    margin: auto;
-    padding: 30px 20px;
-  }
+        /* --- Main Layout & Sections --- */
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 40px 20px;
+        }
+        .section-title {
+            font-size: 2rem;
+            color: var(--skf-black);
+            margin-bottom: 25px;
+            border-left: 5px solid var(--skf-gray-dark);
+            padding-left: 15px;
+        }
 
-  h2.section-title {
-    border-left: 5px solid #004080;
-    padding-left: 10px;
-    margin-bottom: 20px;
-    color: #004080;
-  }
+        /* --- Search Bar --- */
+        .search-wrap {
+            background: var(--skf-white);
+            border: 1px solid #e0e0e0;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 25px auto;
+            max-width: 1200px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            align-items: end;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        }
+        .search-wrap label {
+            font-size: 0.9rem;
+            color: var(--skf-gray-medium);
+            font-weight: 600;
+            margin-bottom: 5px;
+            display: block;
+        }
+        .search-wrap input, .search-wrap select {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 1rem;
+        }
+        .btn {
+            padding: 12px 20px;
+            font-size: 1rem;
+            border-radius: 8px;
+            border: none;
+            background: var(--skf-gray-dark);
+            color: var(--skf-white);
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .btn:hover {
+            background-color: var(--skf-black);
+        }
+        .btn.alt {
+            background: #7f8c8d;
+        }
+        .btn.alt:hover {
+            background: #606c6e;
+        }
+        .tip {
+            grid-column: 1 / -1;
+            font-size: 0.9rem;
+            color: #999;
+            margin-top: 10px;
+        }
 
-  /* Brands row */
-  .brands {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-    margin-bottom: 40px;
-  }
-  .brands img {
-    height: 60px;
-    object-fit: contain;
-    filter: grayscale(100%);
-    transition: 0.3s ease;
-    background: white;
-    padding: 5px;
-    border: 1px solid #ddd;
-  }
-  .brands img:hover {
-    filter: none;
-  }
+        /* --- Brands Section (Now displays original colors) --- */
+        .brands {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            justify-content: center;
+            align-items: center;
+        }
+        .brands img {
+            height: 80px;
+            filter: none; /* Removed the grayscale filter */
+            opacity: 1;
+            transition: transform 0.3s, opacity 0.3s;
+        }
+        .brands img:hover {
+            transform: scale(1.05);
+            opacity: 0.9;
+        }
 
-  /* Product grid */
-  .product-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 20px;
-  }
-  .product-card {
-    border: 1px solid #ddd;
-    background-color: #fff;
-    border-radius: 6px;
-    overflow: hidden;
-    text-align: center;
-    transition: 0.3s ease;
-  }
-  .product-card:hover {
-    box-shadow: 0px 4px 15px rgba(0,0,0,0.1);
-  }
-  .product-card img {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-  }
-  .product-card h3 {
-    font-size: 16px;
-    padding: 10px;
-    background-color: #f8f8f8;
-  }
-  .product-card p {
-    font-size: 14px;
-    padding: 0 10px 10px;
-  }
+        /* --- Product Grid --- */
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+        .product-card {
+            border: 1px solid #e0e0e0;
+            background: var(--skf-white);
+            border-radius: 12px;
+            overflow: hidden;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        .product-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: contain;
+            padding: 15px;
+        }
+        .product-card h3 {
+            font-size: 1.5rem;
+            padding: 15px;
+            background: var(--skf-gray-light);
+            color: var(--skf-black);
+        }
+        .product-card p {
+            font-size: 1rem;
+            padding: 15px;
+            text-align: left;
+            color: var(--skf-gray-dark);
+        }
+        .product-card p strong {
+            color: var(--skf-black);
+        }
+        .product-card span.tag {
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 20px;
+            background-color: #ecf0f1;
+            border: 1px solid #bdc3c7;
+            font-size: 0.8rem;
+            font-weight: 500;
+            color: #333;
+            margin-bottom: 10px;
+        }
 
-  /* Contact buttons */
-  .contact-links {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-  }
-  .contact-links a {
-    text-decoration: none;
-    background-color: #004080;
-    color: white;
-    padding: 12px 16px;
-    border-radius: 5px;
-    font-size: 14px;
-    transition: 0.3s ease;
-  }
-  .contact-links a:hover {
-    background-color: #002d5c;
-  }
+        /* --- Contact Section --- */
+        .contact-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 20px;
+            justify-content: center;
+        }
+        .contact-links a {
+            text-decoration: none;
+            background-color: var(--skf-black);
+            color: var(--skf-white);
+            padding: 12px 25px;
+            font-size: 1rem;
+            border-radius: 8px;
+            transition: background-color 0.3s;
+        }
+        .contact-links a:hover {
+            background-color: var(--skf-gray-dark);
+        }
+        iframe {
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+        }
+        
+        /* --- Footer --- */
+        footer {
+            background-color: var(--skf-black);
+            color: var(--skf-white);
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9rem;
+        }
 
-  footer {
-    background-color: #003366;
-    color: white;
-    text-align: center;
-    padding: 15px;
-    font-size: 14px;
-    margin-top: 40px;
-  }
-</style>
+        /* --- Responsive Adjustments --- */
+        @media (max-width: 768px) {
+            .header-content {
+                text-align: center;
+            }
+            header h1 {
+                font-size: 2.2rem;
+            }
+            header p {
+                font-size: 1rem;
+            }
+            .section-title {
+                font-size: 1.8rem;
+            }
+            .search-wrap {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
+    <header>
+        <div class="header-content">
+            <img src="imaages/1.png" alt="Bismillah Bearings Logo" class="logo big-logo" />
+            <div>
+                <h1>Bismillah Bearing Store</h1>
+                <p>Your Trusted Source for Quality Bearings in Pakistan Since 1995.</p>
+            </div>
+        </div>
+    </header>
 
-<header>
-  <img src="logo-placeholder.png" alt="Bismillah Bearings Logo" />
-  <h1>Bismillah Bearing Store</h1>
-  <p>Your Trusted Source for Quality Bearings in Pakistan</p>
-</header>
-
-<nav>
-  <a href="#about">About</a>
-  <a href="#products">Products</a>
-  <a href="#contact">Contact</a>
-</nav>
-
-<div class="container" id="about">
-  <h2 class="section-title">About Us</h2>
-  <p>Welcome to <strong>Bismillah Bearing Store</strong>. We specialize in premium quality new and used bearings from globally trusted brands including NTN, TIMKEN, FAG, SKF, KOYO, NSK. We also supply high-speed bearings, bushes, and brackets across Pakistan with reliable service.</p>
-</div>
-
-<div class="container">
-  <h2 class="section-title">Brands We Carry</h2>
-  <div class="brands">
-    <img src="ntn-logo.png" alt="NTN">
-    <img src="timken-logo.png" alt="TIMKEN">
-    <img src="fag-logo.png" alt="FAG">
-    <img src="skf-logo.png" alt="SKF">
-    <img src="koyo-logo.png" alt="KOYO">
-    <img src="nsk-logo.png" alt="NSK">
-  </div>
-</div>
-
-<div class="container" id="products">
-  <h2 class="section-title">Our Products</h2>
-  <div class="product-grid">
-    <div class="product-card">
-      <img src="ball-bearing.jpg" alt="Ball Bearings">
-      <h3>Ball Bearings</h3>
-      <p>High-quality ball bearings for various industrial applications.</p>
+    <div class="search-wrap" role="search" aria-label="Search bearings">
+        <div>
+            <label for="q">Search (bearing number or text)</label>
+            <input id="q" type="text" placeholder="e.g., 6205, GE20ES" />
+        </div>
+        <div>
+            <label for="type">Type</label>
+            <select id="type">
+                <option value="">Any type</option>
+                <option>Deep Groove Ball</option>
+                <option>Taper Roller</option>
+                <option>Needle</option>
+                <option>Spherical Plain</option>
+                <option>Self-Aligning Ball</option>
+                <option>Cylindrical Roller</option>
+                <option>Thrust Ball</option>
+            </select>
+        </div>
+        <div>
+            <label for="idmm">Inner Diameter (ID, mm)</label>
+            <input id="idmm" type="number" inputmode="numeric" placeholder="e.g., 25" />
+        </div>
+        <div>
+            <label for="odmm">Outer Diameter (OD, mm)</label>
+            <input id="odmm" type="number" inputmode="numeric" placeholder="e.g., 52" />
+        </div>
+        <div>
+            <label for="wmm">Width (W, mm)</label>
+            <input id="wmm" type="number" inputmode="numeric" placeholder="e.g., 15" />
+        </div>
+        <div style="display:flex; gap:8px;">
+            <button class="btn" id="btnSearch">Search</button>
+            <button class="btn alt" id="btnReset" type="button">Reset</button>
+        </div>
+        <div class="tip">
+            Tip: type a bearing number (e.g., 6205-2RS) or a size (e.g., ID 25).
+        </div>
     </div>
-    <div class="product-card">
-      <img src="taper-roller.jpg" alt="Taper Roller Bearings">
-      <h3>Taper Roller Bearings</h3>
-      <p>Durable and precise for heavy-duty usage.</p>
-    </div>
-    <div class="product-card">
-      <img src="needle-bearing.jpg" alt="Needle Bearings">
-      <h3>Needle Bearings</h3>
-      <p>Compact design with high load capacity.</p>
-    </div>
-    <div class="product-card">
-      <img src="universal-bearing.jpg" alt="Universal Bearings">
-      <h3>Universal Bearings</h3>
-      <p>Versatile solutions for a wide range of needs.</p>
-    </div>
-    <div class="product-card">
-      <img src="high-speed.jpg" alt="High-Speed Bearings">
-      <h3>High-Speed Bearings</h3>
-      <p>Designed for high-performance applications.</p>
-    </div>
-    <div class="product-card">
-      <img src="bush-bracket.jpg" alt="Bushes & Brackets">
-      <h3>Bushes & Brackets</h3>
-      <p>Reliable components for industrial machinery.</p>
-    </div>
-  </div>
-</div>
 
-<div class="container" id="contact">
-  <h2 class="section-title">Contact Us</h2>
-  <div class="contact-links">
-    <a href="https://wa.me/923004429376" target="_blank">📞 WhatsApp</a>
-    <a href="mailto:bismillah.bearing.store.lhr@gmail.com">✉️ Email</a>
-    <a href="https://www.google.com/maps/place/Bismillah+Bearing+Store/data=!4m7!3m6!1s0x3919076af7bd4b49:0xa227d29ff54e7252!8m2!3d31.4402986!4d74.3561549!16s%2Fg%2F11h937mmfx!19sChIJSUu992oHGTkRUnJO9Z_SJ6I?authuser=0&hl=en&rclk=1" target="_blank">📍 Google Maps</a>
-    <a href="https://www.facebook.com/bismillah.bearing.store" target="_blank">🔗 Facebook Page</a>
-  </div>
-</div>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#brands">Brands</a>
+        <a href="#products">Products</a>
+        <a href="#contact">Contact</a>
+    </nav>
 
-<footer>
-  &copy; 2025 Bismillah Bearing Store. All rights reserved.
-</footer>
+    <section class="container" id="about">
+        <h2 class="section-title">About Us</h2>
+        <p>
+            **Bismillah Bearing Store** is your trusted partner for industrial and automotive bearings in Pakistan, Since **1995**. We provide a complete range of high-quality bearings, bushes, and brackets from world-leading brands like NTN, TIMKEN, FAG, SKF, KOYO, and NSK.
+            <br><br>
+            With years of experience, we ensure reliability, durability, and exceptional customer support for every product we offer. Whether you need universal bearings, needle bearings, taper roller bearings, thrust bearings, or high-speed solutions, we deliver the right products at the best prices.
+        </p>
+    </section>
+
+    <section class="container" id="brands">
+        <h2 class="section-title">Brands We Carry</h2>
+        <div class="brands">
+            <img src="imaages/NTN_Corporation_Logo.png" alt="NTN Bearing logo">
+            <img src="imaages/timken logo.png" alt="TIMKEN Bearing logo">
+            <img src="imaages/fag-111111.png" alt="FAG Bearing logo">
+            <img src="imaages/skf-logo-png_seeklogo-127504.png" alt="SKF Bearing logo">
+            <img src="imaages/Official_Koyo_Logo.jpg" alt="KOYO Bearing logo">
+            <img src="imaages/nsk-bearings-500x500.webp" alt="NSK Bearing logo">
+        </div>
+    </section>
+
+    <section class="container" id="products">
+        <h2 class="section-title">Our Products</h2>
+        <div class="product-grid" id="resultsGrid"></div>
+        <div class="product-grid" id="staticCards">
+            <div class="product-card">
+                <img src="imaages/ball_bearings-removebg-preview.png" alt="Ball Bearing for Industrial & Automotive Applications Pakistan">
+                <h3>Ball Bearings</h3>
+                <p>
+                    **Why:** Reduces friction for smooth rotation.<br>
+                    **When:** Ideal for light to medium loads.<br>
+                    **Specialty:** High precision and low noise for electric motors and machinery.
+                </p>
+            </div>
+            <div class="product-card">
+                <img src="imaages/taper_roller_bearing-removebg-preview.png" alt="Taper Roller Bearings for Industrial & Automotive Applications Pakistan">
+                <h3>Taper Roller Bearings</h3>
+                <p>
+                    **Why:** Handles combined radial and axial loads.<br>
+                    **When:** Used in heavy-duty vehicles, gearboxes, and industrial machines.<br>
+                    **Specialty:** High strength and durability for long service life.
+                </p>
+            </div>
+            <div class="product-card">
+                <img src="imaages/needle-bearings-header-removebg-preview.png" alt="Needle Bearings for Industrial & Automotive Applications Pakistan">
+                <h3>Needle Bearings</h3>
+                <p>
+                    **Why:** Compact design for space-saving applications.<br>
+                    **When:** Best for transmissions, pumps, and small machinery.<br>
+                    **Specialty:** High load capacity in minimal space.
+                </p>
+            </div>
+            <div class="product-card">
+                <img src="imaages/universal_bearings-removebg-preview.png" alt="Universal Bearings for Industrial & Automotive Applications Pakistan">
+                <h3>Universal Bearings</h3>
+                <p>
+                    **Why:** Flexible for multiple use cases.<br>
+                    **When:** Suitable for general industrial and mechanical systems.<br>
+                    **Specialty:** Cost-effective and versatile for various load conditions.
+                </p>
+            </div>
+            <div class="product-card">
+                <img src="imaages/high_speed_bearings-removebg-preview.png" alt="High-Speed Bearings for Industrial & Automotive Applications Pakistan">
+                <h3>High-Speed Bearings</h3>
+                <p>
+                    **Why:** Designed for machines requiring very high RPM.<br>
+                    **When:** Used in turbines, CNC spindles, and performance machines.<br>
+                    **Specialty:** Low heat generation, high precision, and long-lasting performance.
+                </p>
+            </div>
+            <div class="product-card">
+                <img src="imaages/bushes-removebg-preview.png" alt="Bushes for Industrial & Automotive Applications Pakistan">
+                <h3>Bushes</h3>
+                <p>
+                    **Why:** Reduces friction between two moving parts.<br>
+                    **When:** Used in motors, pumps, and heavy-duty equipment.<br>
+                    **Specialty:** Provides noise reduction, smooth movement, and increased lifespan of components.
+                </p>
+            </div>
+            <div class="product-card">
+                <img src="imaages/bracket_bearings-removebg-preview.png" alt="Brackets for Industrial & Automotive Applications Pakistan">
+                <h3>Brackets</h3>
+                <p>
+                    **Why:** Provides structural support and stability.<br>
+                    **When:** Common in bearing housings, machinery assemblies, and mounting setups.<br>
+                    **Specialty:** Corrosion-resistant, strong, and easy to install for long-term reliability.
+                </p>
+            </div>
+            <div class="product-card">
+                <img src="imaages/thrust-ball-bearing-250x250-removebg-preview.png" alt="Thrust Bearings for Industrial & Automotive Applications Pakistan">
+                <h3>Thrust Bearings</h3>
+                <p>
+                    **Why:** Handles heavy axial loads efficiently.<br>
+                    **When:** Used in automotive gear systems, marine engines, and heavy machines.<br>
+                    **Specialty:** Provides smooth rotation under high axial pressure for enhanced durability.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="container" id="contact">
+        <h2 class="section-title">Contact Us</h2>
+        <p style="font-size: 1.1rem; text-align: center; max-width: 600px; margin: 0 auto 30px;">
+            Reach out for product inquiries, pricing, or expert advice:
+        </p>
+        <div style="margin:20px 0;">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d270.09673167309313!2d74.35605558819202!3d31.440293555453028!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3919076af7bd4b49%3A0xa227d29ff54e7252!2sBismillah%20Bearing%20Store!5e1!3m2!1sen!2sus!4v1758103743235!5m2!1sen!2sus" 
+                width="100%" 
+                height="350" 
+                style="border:0; border-radius:8px;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+        <div class="contact-links">
+            <a href="https://wa.me/923004429376" target="_blank">📞 WhatsApp</a>
+            <a href="mailto:bismillah.bearing.store.lhr@gmail.com">✉️ Email</a>
+            <a href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d270.09673167309313!2d74.35605558819202!3d31.440293555453028!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3919076af7bd4b49%3A0xa227d29ff54e7252!2sBismillah%20Bearing%20Store!5e1!3m2!1sen!2sus!4v1758103743235!5m2!1sen!2sus" target="_blank">📍 Google Maps</a>
+            <a href="https://www.facebook.com/bismillah.bearing.store" target="_blank">🔗 Facebook Page</a>
+        </div>
+    </section>
+
+    <footer>
+        © 2025 Bismillah Bearing Store. All rights reserved.
+    </footer>
+
+    <script>
+        // Smooth Scroll
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+
+        // --- START: Bearing Search Data & Logic ---
+        const bearings = [
+            { number: '6000', type: 'Deep Groove Ball', id: 10, od: 26, w: 8, image: 'https://via.placeholder.com/280x200.png?text=6000', desc: 'General-purpose bearing.' },
+            { number: '6001', type: 'Deep Groove Ball', id: 12, od: 28, w: 8, image: 'https://via.placeholder.com/280x200.png?text=6001', desc: 'General-purpose bearing.' },
+            { number: '6002', type: 'Deep Groove Ball', id: 15, od: 32, w: 9, image: 'https://via.placeholder.com/280x200.png?text=6002', desc: 'Compact ball bearing.' },
+            { number: '6003', type: 'Deep Groove Ball', id: 17, od: 35, w: 10, image: 'https://via.placeholder.com/280x200.png?text=6003', desc: 'Common motor bearing.' },
+            { number: '6004', type: 'Deep Groove Ball', id: 20, od: 42, w: 12, image: 'https://via.placeholder.com/280x200.png?text=6004', desc: 'Durable ball bearing.' },
+            { number: '6205', type: 'Deep Groove Ball', id: 25, od: 52, w: 15, image: 'https://via.placeholder.com/280x200.png?text=6205', desc: 'Heavy-duty ball bearing.' },
+            { number: '6206', type: 'Deep Groove Ball', id: 30, od: 62, w: 16, image: 'https://via.placeholder.com/280x200.png?text=6206', desc: 'Popular for motors/gearboxes.' },
+            { number: '6305', type: 'Deep Groove Ball', id: 25, od: 62, w: 17, image: 'https://via.placeholder.com/280x200.png?text=6305', desc: 'Heavy-duty single row.' },
+            { number: '30205', type: 'Taper Roller', id: 25, od: 52, w: 16.25, image: 'https://via.placeholder.com/280x200.png?text=30205', desc: 'Automotive wheel/gearbox use.' },
+            { number: 'GE20ES', type: 'Spherical Plain', id: 20, od: 35, w: 16, image: 'https://via.placeholder.com/280x200.png?text=GE20ES', desc: 'Double-lip sealed, maintenance-free.' },
+            { number: 'HK1012', type: 'Needle', id: 10, od: 14, w: 12, image: 'https://via.placeholder.com/280x200.png?text=HK1012', desc: 'Drawn cup needle roller bearing.' },
+        ];
+
+        const els = {
+            q: document.getElementById('q'),
+            type: document.getElementById('type'),
+            idmm: document.getElementById('idmm'),
+            odmm: document.getElementById('odmm'),
+            wmm: document.getElementById('wmm'),
+            results: document.getElementById('resultsGrid'),
+            staticCards: document.getElementById('staticCards'),
+            btnSearch: document.getElementById('btnSearch'),
+            btnReset: document.getElementById('btnReset'),
+        };
+
+        function cardHTML(b){
+            return `
+                <div class="product-card">
+                    <img src="${b.image}" alt="${b.number}">
+                    <h3>${b.number}</h3>
+                    <p>
+                        <span class="tag">${b.type}</span><br>
+                        <strong>ID:</strong> ${b.id} mm   <strong>OD:</strong> ${b.od} mm   <strong>W:</strong> ${b.w} mm<br>
+                        ${b.desc}
+                    </p>
+                </div>
+            `;
+        }
+
+        function render(list){
+            els.results.innerHTML = list.map(cardHTML).join('');
+            els.staticCards.style.display = list.length > 0 ? 'none' : 'grid';
+            if (list.length > 0) {
+                document.getElementById('products').scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+        function normalize(v){ return String(v).trim().toLowerCase(); }
+
+        function search(){
+            const q = normalize(els.q.value);
+            const t = normalize(els.type.value);
+            const idv = els.idmm.value ? Number(els.idmm.value) : null;
+            const odv = els.odmm.value ? Number(els.odmm.value) : null;
+            const wv = els.wmm.value ? Number(els.wmm.value) : null;
+
+            const out = bearings.filter(b => {
+                const matchesText = !q ||
+                    b.number.toLowerCase().includes(q) ||
+                    b.type.toLowerCase().includes(q) ||
+                    b.desc.toLowerCase().includes(q);
+
+                const matchesType = !t || normalize(b.type) === t;
+
+                const matchesID = (idv === null) || (Number(b.id) === idv);
+                const matchesOD = (odv === null) || (Number(b.od) === odv);
+                const matchesW = (wv === null) || (Number(b.w) === wv);
+
+                return matchesText && matchesType && matchesID && matchesOD && matchesW;
+            });
+
+            render(out);
+        }
+
+        function resetSearch(){
+            els.q.value = '';
+            els.type.value = '';
+            els.idmm.value = '';
+            els.odmm.value = '';
+            els.wmm.value = '';
+            render([]);
+        }
+
+        els.btnSearch.addEventListener('click', search);
+        els.btnReset.addEventListener('click', resetSearch);
+        
+        ['q', 'type', 'idmm', 'odmm', 'wmm'].forEach(id => {
+            document.getElementById(id).addEventListener('keydown', (e)=>{
+                if(e.key==='Enter') search();
+            });
+        });
+        // --- END: Bearing Search Data & Logic ---
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Store",
+        "name": "Bismillah Bearing Store",
+        "image": "https://yourwebsite.com/imaages/1.png",
+        "description": "Buy premium NTN, SKF, FAG, KOYO, TIMKEN bearings in Pakistan. Needle, ball, taper, and high-speed bearings since 1995.",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Rana Fouziya St, Bismillah Housing Scheme",
+            "addressLocality": "Lahore",
+            "addressRegion": "Punjab",
+            "postalCode": "54000",
+            "addressCountry": "PK"
+        },
+        "telephone": "+923004429376",
+        "url": "https://yourwebsite.com",
+        "sameAs": [
+            "https://www.facebook.com/bismillah.bearing.store"
+        ]
+    }
+    </script>
 
 </body>
 </html>
